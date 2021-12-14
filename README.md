@@ -9,3 +9,11 @@ wget -q -O- "https://github.com/userdocs/jq-crossbuild/releases/latest/download/
 ```
 
 This command format works with all the releases here: https://github.com/userdocs/jq-crossbuild/releases/latest
+
+Docker images are also published and are available here - https://hub.docker.com/repository/docker/userdocs/jq
+
+```bash
+userdocs/jq:tagname
+``
+
+[All available tags](https://github.com/userdocs/jq-crossbuild/releases/latest)
