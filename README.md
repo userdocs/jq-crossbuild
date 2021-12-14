@@ -14,6 +14,9 @@ Docker images are also published and are available here - https://hub.docker.com
 
 ```bash
 userdocs/jq:tagname
-``
+```
 
 [All available tags](https://github.com/userdocs/jq-crossbuild/releases/latest)
+
+
+docker run -it userdocs/jq:x86_64-linux-musl jq --version
