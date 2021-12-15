@@ -1,7 +1,7 @@
 name: matrix jq docker publish
 
 on:
-  workflow_dispatch:
+  - workflow_dispatch
 
 jobs:
   build:
