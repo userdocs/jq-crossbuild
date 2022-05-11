@@ -98,3 +98,6 @@ jobs:
           context: .
           push: true
           tags: userdocs/jq:${{ matrix.arch_type }}
+          build-args: |
+            TARGET=${{ matrix.arch_type }}
+            BASE_URL=https://github.com/userdocs/jq-crossbuild/releases/latest/download
