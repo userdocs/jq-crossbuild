@@ -91,6 +91,11 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Download and extract
+        run: |
+          wget -O jq.tar.gz "https://github.com/userdocs/jq-crossbuild/releases/latest/download/${{ matrix.arch_type }}.tar.gz"
+          tar -xzvf jq.tar.gz
+
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v3
@@ -98,6 +103,3 @@ jobs:
           context: .
           push: true
           tags: userdocs/jq:${{ matrix.arch_type }}
-          build-args: |
-            TARGET=${{ matrix.arch_type }}
-            BASE_URL=https://github.com/userdocs/jq-crossbuild/releases/latest/download
