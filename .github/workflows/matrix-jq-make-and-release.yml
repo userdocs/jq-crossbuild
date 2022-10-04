@@ -129,7 +129,7 @@ jobs:
         run: echo "version=$(cat jq-version | sed 's/-dirty//')" >> $GITHUB_ENV
 
       - name: Create release - tag - assets
-        uses: ncipollo/release-action@v1.11.0
+        uses: ncipollo/release-action@v1.11.1
         with:
           prerelease: false
           artifacts: "${{ matrix.arch_type }}.tar.gz"
